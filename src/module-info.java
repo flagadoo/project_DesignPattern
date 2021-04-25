@@ -1,6 +1,10 @@
 module project_DesignPattern {
-	requires javafx.graphics;
+	requires transitive javafx.graphics;
 	requires javafx.fxml;
-	requires javafx.controls;
+	requires transitive javafx.controls;
+	
+	opens appli to javafx.graphics,javafx.fxml;
+	
 	exports appli to javafx.graphics,javafx.fxml;
+	
 }
