@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="306.0" text="TEAMS Attendees List Converter" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <SplitPane dividerPositions="0.43, 0.6899" layoutX="23.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="618.0" prefWidth="306.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="228.0" prefWidth="304.0">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="28.0" prefHeight="93.0" prefWidth="285.0">
+                           <children>
+                              <Label layoutX="69.0" layoutY="32.0" prefHeight="31.0" prefWidth="139.0" text="Déposez votre fichier ici" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="14.0" layoutY="137.0" text="Fichier">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="169.0" text="Date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="199.0" text="Heure min :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="231.0" text="Heure max :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="304.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" text="Libellé :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="85.0" text="Heure de fin :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="66.0" text="Heure de début :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="78.0" layoutY="23.0" prefHeight="25.0" prefWidth="194.0" />
+                        <TextField layoutX="136.0" layoutY="64.0" prefHeight="25.0" prefWidth="136.0" />
+                        <TextField layoutX="137.0" layoutY="106.0" prefHeight="25.0" prefWidth="135.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="14.0" text="Trier en sortie :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="175.0" layoutY="14.0" text="Générer en sortie :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="23.0" layoutY="65.0" mnemonicParsing="false" text="Par ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton layoutX="23.0" layoutY="39.0" mnemonicParsing="false" text="Par nom">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <CheckBox layoutX="177.0" layoutY="100.0" mnemonicParsing="false" text="sans nom">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="177.0" layoutY="69.0" mnemonicParsing="false" text="sans ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="177.0" layoutY="39.0" mnemonicParsing="false" text="sans planning">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <Button layoutX="93.0" layoutY="149.0" mnemonicParsing="false" text="Générer la sortie" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>
