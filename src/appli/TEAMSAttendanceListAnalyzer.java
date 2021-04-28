@@ -33,7 +33,7 @@ public class TEAMSAttendanceListAnalyzer {
                         person.addPeriod(action, instant);
                         this._peopleList.replace(identite,person);
                     } else {
-                        People person = new People(identite);
+                        PeopleHTML person = new PeopleHTML(identite);
                         person.addPeriod(action, instant);
                         this._peopleList.put(identite, person);
                     }
