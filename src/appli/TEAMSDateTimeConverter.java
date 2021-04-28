@@ -8,7 +8,7 @@ public class TEAMSDateTimeConverter {
 
     public static LocalDateTime StringToLocalDateTime(String instant) {
         
-        String pattern = "dd/MM/yyyy Ã  HH:mm:ss";
+        String pattern = "dd/MM/yyyy à HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
         var _converter = new LocalDateTimeStringConverter(formatter, formatter);
         return _converter.fromString(instant);
