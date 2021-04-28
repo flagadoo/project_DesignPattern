@@ -38,13 +38,13 @@ public class PeopleHTML extends People{
                 html += "<img src=\"off.png\" ";
                 html += "width=\"" + (100.*delayMinutes/durationMaxMinutes) + "%\" ";
                 html += "height=\"20\" title=\"absent(e) de " + refTime.toString();
-                html += " à " + begin.toString() + " \"> \n";
+                html += " Ã  " + begin.toString() + " \"> \n";
             }
             // green bar for the current period
             html += "<img src=\"on.png\" ";
             html += "width=\"" + (100.*duration/durationMaxMinutes) + "%\" ";
-            html += "height=\"20\" title=\"connecté(e) de " + begin.toString();
-            html += " à " + end.toString()+ "\"> \n";
+            html += "height=\"20\" title=\"connectï¿½(e) de " + begin.toString();
+            html += " Ã  " + end.toString()+ "\"> \n";
             refTime = end;
         }
         // last period aligned on end time ?
@@ -55,7 +55,7 @@ public class PeopleHTML extends People{
             html += "<img src=\"off.png\" ";
             html += "width=\"" + (100.*delayMinutes/durationMaxMinutes) + "%\" ";
             html += "height=\"20\" title=\"absent(e) de " + refTime.toString();
-            html += " à " + endTime.toString() + " \"> \n";
+            html += " Ã  " + endTime.toString() + " \"> \n";
         }
         html += "</div> \n"; // end of div timebar
         html +=	"<div class=\"duration\"> " + (long)Math.round(totalDuration) + " </div> \n";

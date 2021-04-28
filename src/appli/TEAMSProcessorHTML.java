@@ -7,7 +7,8 @@ public class TEAMSProcessorHTML extends TEAMSProcessor{
     public TEAMSProcessorHTML(File _file, String _start, String _stop) {
         super(_file, _start, _stop);
     }
-    @Override public String codeTo() {
+
+    public String codeTo() {
 
         String html = "<!DOCTYPE html> \n <html lang=\"fr\"> \n <head> \n <meta charset=\"utf-8\"> ";
         html += "<title> Attendance Report </title> \n <link rel=\"stylesheet\" media=\"all\" href=\"visu.css\"> \n";
@@ -21,7 +22,7 @@ public class TEAMSProcessorHTML extends TEAMSProcessor{
                 "\t\t<td> " + /*this._allpeople.iterator().next().getDate() +*/ " </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
-                "\t\t<th> Heure début : </th>\n" +
+                "\t\t<th> Heure dÃ©but : </th>\n" +
                 "\t\t<td> " + this._startTime + " </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
@@ -30,22 +31,22 @@ public class TEAMSProcessorHTML extends TEAMSProcessor{
                 "\t</tr>\n" +
                 "\t<tr>\n" +
                 "\t\t<th> Cours : </th>\n" +
-                "\t\t<td> CM Bases de données et programmation Web </td>\n" +
+                "\t\t<td> CM Bases de donnÃ©es et programmation Web </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
-                "\t\t<th> Fichier analysé : </th>\n" +
+                "\t\t<th> Fichier analysÃ© : </th>\n" +
                 "\t\t<td> " + this._fileName + " </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
-                "\t\t<th> Nombre de connectés : </th>\n" +
+                "\t\t<th> Nombre de connectÃ©s : </th>\n" +
                 "\t\t<td> " + this._allpeople.size() + "  </td>\n" +
                 "\t</tr>\n" +
                 "</table>\n" +
                 "</div>\n" +
                 "\n" +
-                "<h2> Durées de connexion</h2>\n" +
+                "<h2> DurÃ©es de connexion</h2>\n" +
                 "\n" +
-                "<p> Pour chaque personne ci-dessous, on retrouve son temps total de connexion sur la plage déclarée du cours, ainsi qu'un graphe qui indique les périodes de connexion (en vert) et d'absence de connexion (en blanc). En pointant la souris sur une zone, une bulle affiche les instants de début et de fin de période. \n" +
+                "<p> Pour chaque personne ci-dessous, on retrouve son temps total de connexion sur la plage dÃ©clarÃ©e du cours, ainsi qu'un graphe qui indique les pÃ©riodes de connexion (en vert) et d'absence de connexion (en blanc). En pointant la souris sur une zone, une bulle affiche les instants de dÃ©but et de fin de pÃ©riode. \n" +
                 "</p>";
         html += "<div id=\"blockpeople\"> ";
 
