@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class TEAMSProcessor {
+public class TEAMSProcessor{
 
     private static Collection<People> _allpeople = null;
     private static String _fileName;
@@ -95,4 +95,12 @@ public class TEAMSProcessor {
 	    html += "</div> \n </body> \n </html>";
         return html;
     }
+
+	public void writeFile() {
+		// TODO Auto-generated method stub
+		
+		fileWriteHTML write = new fileWriteHTML();
+		write.writeFile(_allpeople, _fileName, _startTime, _endTime);
+		
+	}
 }

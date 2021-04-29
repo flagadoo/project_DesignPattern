@@ -29,6 +29,6 @@ public class MainController {
         }
 */
         //System.out.println( teamsProcessor.toHTMLCode() );
-        creator.writeFile();
+       teamsProcessor.writeFile();
     }
 }
