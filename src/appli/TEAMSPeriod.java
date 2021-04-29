@@ -13,7 +13,7 @@ public class TEAMSPeriod {
 
     // TODO Simplifier avec classe statique
     public TEAMSPeriod(String _start) {
-        String pattern = "dd/MM/yyyy à HH:mm:ss";
+        String pattern = "dd/MM/yyyy Ã  HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
         this._converter = new LocalDateTimeStringConverter(formatter, formatter);
         this.startAt(_start);
