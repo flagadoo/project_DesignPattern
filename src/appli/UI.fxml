@@ -11,12 +11,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+
 <TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="306.0" text="TEAMS Attendees List Converter" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.MainController">
+
    <content>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <SplitPane dividerPositions="0.43, 0.6899" layoutX="23.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="618.0" prefWidth="306.0">
               <items>
+
                 <AnchorPane fx:id="ZoneDrag" minHeight="0.0" minWidth="0.0" prefHeight="228.0" prefWidth="304.0">
                      <children>
                         <Pane layoutX="9.0" layoutY="28.0" onDragDropped="#setOnDragDropped" onDragExited="#setOnDragExited" onDragOver="#setOnDragOver" prefHeight="93.0" prefWidth="285.0">
@@ -29,21 +32,28 @@
                            </children>
                         </Pane>
                         <Label fx:id="label_nomfichier" layoutX="14.0" layoutY="137.0">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
+
                         <Label fx:id="label_date" layoutX="14.0" layoutY="169.0">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
+
                         <Label fx:id="label_hmin" layoutX="14.0" layoutY="199.0">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
+
                         <Label fx:id="label_hmax" layoutX="14.0" layoutY="231.0">
+
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -84,32 +94,44 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
+
                         <RadioButton fx:id="par_ID" layoutX="23.0" layoutY="65.0" mnemonicParsing="false" text="Par ID">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </RadioButton>
+
                         <RadioButton fx:id="par_nom" layoutX="23.0" layoutY="39.0" mnemonicParsing="false" text="Par nom">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </RadioButton>
+
                         <CheckBox fx:id="sans_nom" layoutX="177.0" layoutY="100.0" mnemonicParsing="false" text="sans nom">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </CheckBox>
+
                         <CheckBox fx:id="sans_id" layoutX="177.0" layoutY="69.0" mnemonicParsing="false" text="sans ID">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </CheckBox>
+
                         <CheckBox fx:id="sans_planning" layoutX="177.0" layoutY="39.0" mnemonicParsing="false" text="sans planning">
+
                            <font>
                               <Font size="14.0" />
                            </font>
                         </CheckBox>
+
                         <Button fx:id="b_generer" layoutX="93.0" layoutY="149.0" mnemonicParsing="false" onAction="#method_generer" text="Générer la sortie" />
+
                      </children>
                   </AnchorPane>
               </items>
