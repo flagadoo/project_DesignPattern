@@ -35,4 +35,20 @@ public interface People extends Comparable<People> {
     @Override
     public int compareTo(People o);
 
+	public String get_name() {
+		return _name;
+	}
+
+	public String get_start() {
+		return _start;
+	}
+
+	public String get_stop() {
+		return _stop;
+	}
+
+	public LinkedList<TEAMSPeriod> get_periodList() {
+		return _periodList;
+	}
+
 }
