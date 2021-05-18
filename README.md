@@ -1,6 +1,9 @@
 # Design Pattern Project
 
-Development Team:
+
+***Development Team:***
+-
+
 + HERISSE Joseph
 + LAMEIRAO Alex
 + ONSEKIZ Ahmet-kadir
