@@ -174,4 +174,20 @@ public class People implements Comparable<People> {
         return this._periodList.isEmpty();
     }
 
+	public String get_name() {
+		return _name;
+	}
+
+	public String get_start() {
+		return _start;
+	}
+
+	public String get_stop() {
+		return _stop;
+	}
+
+	public LinkedList<TEAMSPeriod> get_periodList() {
+		return _periodList;
+	}
+
 }
