@@ -29,7 +29,8 @@ public class MainController {
             System.out.println( people );
         }
 */
-        //System.out.println( teamsProcessor.toHTMLCode() );
+        //System.out.println( teamsProcessorHTML.toCode() );
+        //System.out.println( teamsProcessorCSS.toCode() );
        teamsProcessorHTML.writeFile();
        teamsProcessorCSS.writeFile();
     }
