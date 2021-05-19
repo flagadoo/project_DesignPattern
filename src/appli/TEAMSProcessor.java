@@ -11,7 +11,7 @@ public interface TEAMSProcessor{
 
     public Collection<People> get_allpeople();
 
-    public String toHTMLCode();
+    public String toCode();
 
 	public void writeFile();
 }

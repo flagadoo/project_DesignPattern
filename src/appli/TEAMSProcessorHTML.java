@@ -47,7 +47,7 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
     }
 
     @Override
-    public String toHTMLCode() {
+    public String toCode() {
 
         String html = "<!DOCTYPE html> \n <html lang=\"fr\"> \n <head> \n <meta charset=\"utf-8\"> ";
         html += "<title> Attendance Report </title> \n <link rel=\"stylesheet\" media=\"all\" href=\"visu.css\"> \n";
