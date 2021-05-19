@@ -5,6 +5,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collection;
 
+/**
+ * Classe régissant la structure CSS d'une sortie fichier de cette extension.
+ * @author geo02
+ * @author Jade
+ */
 public class fileWriteCSS implements FileWriterStrategy{
 
     private Collection<People> _allpeople = null;
@@ -49,6 +54,11 @@ public class fileWriteCSS implements FileWriterStrategy{
 
     }
 
+    /**
+     * Génère le contenu du fichier CSS en respectant les balises et l'intégration des données
+     * provenant du fichier.
+     * @return la chaîne de caractères css
+     */
     private String doCSS()
     {
         String css = "body{\r\n"

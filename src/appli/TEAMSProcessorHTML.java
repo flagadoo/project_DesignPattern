@@ -6,6 +6,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Classe régissant le parcours des données de tout les participants
+ * pour une sortie HTML.
+ * @author Jade
+ */
 public class TEAMSProcessorHTML implements TEAMSProcessor{
 
     private static Collection<People> _allpeople = null;
@@ -46,6 +51,10 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
         return _allpeople;
     }
 
+    /**
+     * Génère le code HTML et le retourne dans une chaîne de caractères.
+     * @return la chaîne de caractères html
+     */
     @Override
     public String toCode() {
 
@@ -91,13 +100,17 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
 
         for (People people : _allpeople) {
 
-            html += people.getHTMLCode();
+            html += people.getCode();
         }
 
         html += "</div> \n </body> \n </html>";
         return html;
     }
 
+    /**
+     * Ecrit le code HTML dans un fichier.
+     * @author geo02
+     */
     @Override
     public void writeFile() {
         // TODO Auto-generated method stub

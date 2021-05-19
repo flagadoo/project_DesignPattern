@@ -6,6 +6,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.LinkedList;
 import java.util.Locale;
 
+/**
+ * Interface qui lis les données extraites de TEAMS pour en extraire l'activitée des participants
+ * aux réunions, ainsi que leurs identités, en implémentant le DP Factory.
+ *
+ * @author Jade
+ *
+ */
 public interface People extends Comparable<People> {
 
 
@@ -27,7 +34,7 @@ public interface People extends Comparable<People> {
 
     public boolean isOutOfPeriod();
 
-    public String getHTMLCode();
+    public String getCode();
 
     @Override
     public String toString();

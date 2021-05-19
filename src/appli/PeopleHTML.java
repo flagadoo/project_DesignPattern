@@ -7,6 +7,10 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Locale;
 
+/**
+ * Classe gérant l'interface People dans le cas d'une sortie en HTML.
+ * @author Jade
+ */
 public class PeopleHTML implements People, Comparable<People> {
 
     final String _name;
@@ -112,8 +116,12 @@ public class PeopleHTML implements People, Comparable<People> {
         return this._periodList.isEmpty();
     }
 
+    /**
+     * Génère le code HTML de l'activité de la personne instanciée.
+     * @return la chaîne de caractères html
+     */
     @Override
-    public String getHTMLCode() {
+    public String getCode() {
 
         if ( this.isOutOfPeriod() ) return ("");
 

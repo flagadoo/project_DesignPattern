@@ -6,6 +6,12 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Classe gérant la génération du code CSS, ainsi que l'écritue dans un
+ * fichier du dit code.
+ * @author Jade
+ */
+
 public class TEAMSProcessorCSS implements TEAMSProcessor{
     private static Collection<People> _allpeople = null;
     private static String _fileName;
@@ -45,6 +51,10 @@ public class TEAMSProcessorCSS implements TEAMSProcessor{
         return _allpeople;
     }
 
+    /**
+     * Génère le code CSS et le retourne dans une chaîne de caractères.
+     * @return la chaîne de caractères css
+     */
     @Override
     public String toCode() {
         String css = "body{\r\n"
@@ -126,6 +136,10 @@ public class TEAMSProcessorCSS implements TEAMSProcessor{
         return css;
     }
 
+    /**
+     * Ecrit le code CSS dans un fichier.
+     * @author geo02
+     */
     @Override
     public void writeFile() {
         // TODO Auto-generated method stub
