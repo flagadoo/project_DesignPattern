@@ -21,10 +21,12 @@ public class PeopleHTML implements People, Comparable<People> {
         this._periodList = new LinkedList<>();
     }
 
+    @Override
     public String get_id() {
         return _id;
     }
 
+    @Override
     public void addPeriod(String action, String instant) {
 
         if ( action.charAt(0) == 'R' ) {
@@ -38,6 +40,7 @@ public class PeopleHTML implements People, Comparable<People> {
         }
     }
 
+    @Override
     public void forceEndTimeAt(String instant) {
         this._stop = instant;
         // delete all periods started after ending time
@@ -59,6 +62,7 @@ public class PeopleHTML implements People, Comparable<People> {
                 this._periodList.getLast().stopAt(this._stop);
     }
 
+    @Override
     public void forceStartTimeAt(String instant) {
         this._start = instant;
         // delete all periods ended before starting time
@@ -78,6 +82,7 @@ public class PeopleHTML implements People, Comparable<People> {
 
     }
 
+    @Override
     public long getTotalAttendanceDuration() {
         double totalDuration = 0;
         for (TEAMSPeriod period : this._periodList) {
@@ -86,24 +91,29 @@ public class PeopleHTML implements People, Comparable<People> {
         return Math.round(totalDuration);
     }
 
+    @Override
     public boolean isClosed() {
         return this._periodList.getLast().isEnded();
     }
 
+    @Override
     public String getName() {
         return this._name;
     }
 
+    @Override
     public String getDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
         return ( this._periodList.getFirst().get_start().format(formatter.withLocale(Locale.FRANCE)) );
     }
 
+    @Override
     public boolean isOutOfPeriod() {
         return this._periodList.isEmpty();
     }
 
-    public String getCode() {
+    @Override
+    public String getHTMLCode() {
 
         if ( this.isOutOfPeriod() ) return ("");
 
@@ -176,5 +186,24 @@ public class PeopleHTML implements People, Comparable<People> {
         return (int)(this.getTotalAttendanceDuration()-o.getTotalAttendanceDuration());
     }
 
+    @Override
+    public String get_name() {
+        return _name;
+    }
+
+    @Override
+    public String get_start() {
+        return _start;
+    }
+
+    @Override
+    public String get_stop() {
+        return _stop;
+    }
+
+    @Override
+    public LinkedList<TEAMSPeriod> get_periodList() {
+        return _periodList;
+    }
 
 }

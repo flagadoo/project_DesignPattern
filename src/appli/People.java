@@ -27,7 +27,7 @@ public interface People extends Comparable<People> {
 
     public boolean isOutOfPeriod();
 
-    public String getCode();
+    public String getHTMLCode();
 
     @Override
     public String toString();
@@ -35,20 +35,12 @@ public interface People extends Comparable<People> {
     @Override
     public int compareTo(People o);
 
-	public String get_name() {
-		return _name;
-	}
+	public String get_name();
 
-	public String get_start() {
-		return _start;
-	}
+	public String get_start();
 
-	public String get_stop() {
-		return _stop;
-	}
+	public String get_stop();
 
-	public LinkedList<TEAMSPeriod> get_periodList() {
-		return _periodList;
-	}
+	public LinkedList<TEAMSPeriod> get_periodList();
 
 }

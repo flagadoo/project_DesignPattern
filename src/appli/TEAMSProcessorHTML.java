@@ -8,13 +8,13 @@ import java.util.List;
 
 public class TEAMSProcessorHTML implements TEAMSProcessor{
 
-    private Collection<People>_allpeople = null;
-    private String _fileName;
-    private String _startTime;
-    private String _endTime;
+    private static Collection<People> _allpeople = null;
+    private static String _fileName;
+    private static String _startTime;
+    private static String _endTime;
 
     public TEAMSProcessorHTML(File _file, String _start, String _stop) {
-            /*
+        /*
          csv file to read
          start time of the course
          end time of the source
@@ -43,10 +43,11 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
 
     @Override
     public Collection<People> get_allpeople() {
-        return null;
+        return _allpeople;
     }
 
-    public String codeTo() {
+    @Override
+    public String toHTMLCode() {
 
         String html = "<!DOCTYPE html> \n <html lang=\"fr\"> \n <head> \n <meta charset=\"utf-8\"> ";
         html += "<title> Attendance Report </title> \n <link rel=\"stylesheet\" media=\"all\" href=\"visu.css\"> \n";
@@ -61,11 +62,11 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
                 "\t</tr>\n" +
                 "\t<tr>\n" +
                 "\t\t<th> Heure début : </th>\n" +
-                "\t\t<td> " + this._startTime + " </td>\n" +
+                "\t\t<td> " + _startTime + " </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
                 "\t\t<th> Heure fin : </th>\n" +
-                "\t\t<td> " + this._endTime + " </td>\n" +
+                "\t\t<td> " + _endTime + " </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
                 "\t\t<th> Cours : </th>\n" +
@@ -73,11 +74,11 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
                 "\t</tr>\n" +
                 "\t<tr>\n" +
                 "\t\t<th> Fichier analysé : </th>\n" +
-                "\t\t<td> " + this._fileName + " </td>\n" +
+                "\t\t<td> " + _fileName + " </td>\n" +
                 "\t</tr>\n" +
                 "\t<tr>\n" +
                 "\t\t<th> Nombre de connectés : </th>\n" +
-                "\t\t<td> " + this._allpeople.size() + "  </td>\n" +
+                "\t\t<td> " + _allpeople.size() + "  </td>\n" +
                 "\t</tr>\n" +
                 "</table>\n" +
                 "</div>\n" +
@@ -88,11 +89,21 @@ public class TEAMSProcessorHTML implements TEAMSProcessor{
                 "</p>";
         html += "<div id=\"blockpeople\"> ";
 
-        for (People people : this._allpeople) {
+        for (People people : _allpeople) {
 
-            html += people.getCode();
+            html += people.getHTMLCode();
         }
+
         html += "</div> \n </body> \n </html>";
         return html;
+    }
+
+    @Override
+    public void writeFile() {
+        // TODO Auto-generated method stub
+
+        fileWriteHTML write = new fileWriteHTML();
+        write.writeFile(_allpeople, _fileName, _startTime, _endTime);
+
     }
 }
